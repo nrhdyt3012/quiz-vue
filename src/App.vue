@@ -13,10 +13,11 @@ console.log(quizes)
    </header> 
    <section id="quiz-container">
     <div v-for="quiz in quizes" :key="quiz.id"  class="card">
-      <img src="/public/img-programming.jpg" alt="Programming">
+      <img :src="quiz.img" 
+      :alt="quiz.title">
       <div class="card-body">
-        <h2>Programming</h2>
-        <p>2 Qestion</p>
+        <h2>{{quiz.title}}</h2>
+        <p>{{ quiz.questions.length }} Question</p>
       </div>
     </div>
    </section>
