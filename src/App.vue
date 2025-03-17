@@ -20,15 +20,8 @@ watch(search, () => {
     <input v-model="search" id="search-input" type="text">
    </header> 
    <section id="quiz-container">
-    <!-- <div >
-      <img :src="quiz.img" 
-      :alt="quiz.title">
-      <div class="card-body">
-        <h2>{{quiz.title}}</h2>
-        <p>{{ quiz.questions.length }} Question</p>
-      </div>
-    </div> -->
-    <QuizCard v-for="quiz in quizes" :key="quiz.id"  class="card"/>
+  
+    <QuizCard v-for="quiz in quizes" :key="quiz.id" :quiz="quiz"/>
    </section>
   </main>
 </template>
